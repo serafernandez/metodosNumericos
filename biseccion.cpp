@@ -15,10 +15,10 @@ int evaluarF(float a, float b){
 int main(){
     float limiteSuperior, limiteInferior, e;
 
-    cout << "Ingrese valor superior ";
-    cin >> limiteSuperior;
     cout << "Ingrese valor inferior ";
     cin >> limiteInferior;
+    cout << "Ingrese valor superior ";
+    cin >> limiteSuperior;
     cout << "Ingrese el error tolerado ";
     cin >> e;
 
