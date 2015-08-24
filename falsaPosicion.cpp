@@ -44,7 +44,8 @@ int main(){
         }
 
         error = fabs(f(limiteNuevo));
+        cout << "\nIteracion " << iteracion << ", Error: " << error;
     }while(error > e);
-    cout << "Raiz " << limiteNuevo;
+    cout << "\nRaiz " << limiteNuevo << "\n";
     return 0;
 }
