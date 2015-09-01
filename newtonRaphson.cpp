@@ -24,10 +24,13 @@ int main(){
     cin >> e;
 
     float valorViejo, error;
+    int iteracion = 0;
     do{
+        iteracion++;
         valorViejo = valorInicial;
         valorInicial = g(valorInicial);
         error = (((valorInicial - valorViejo) / valorInicial ) * 100);
+        cout << "\nIteracion " << iteracion << ", Error: " << error;
     }while(error > e);
 
     cout << "La raiz es " << valorInicial << "con un error de " << error << endl;
