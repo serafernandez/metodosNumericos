@@ -22,10 +22,13 @@ int main(){
     cin >> e;
 
     float valorViejo, error;
+    int iteracion = 0;
     do{
+        iteracion++;
         valorViejo = valor;
         valor = g(valor);
         error = fabs(((valor - valorViejo) / valor) * 100);
+        cout << "\nIteracion " << iteracion << ", Error: " << error;
     }while(error > e);
     cout << "La raiz es " << valor << " con un eshror de " << error;
 
