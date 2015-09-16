@@ -1,5 +1,5 @@
 # Metodos Cerrados
-Se los llama cerrados porque necesitan dos valores iniciales para calcular la raiz. Estos valores deben encerrar a la raiz.
+Se los llama cerrados porque necesitan dos valores iniciales para calcular la raiz. Estos valores deben encerrar a la raiz. Se los llama metodos convergentes.
 
 ## Biseccion
 
@@ -21,3 +21,8 @@ La falsa posicion es una alternativa basada en una visualizacion grafica. Uno de
 ### Contras
 
 Hay que tener cuidado en que casos se usa.
+
+# Metodos abiertos
+Los metodos abiertos se basan en formulas que requieren unicamente de un solo valor de inicio x o que empiecen con un par de ellor, pero no necesariamente encierran la raiz. Algunas veces divergen o se alejan de la raiz verdadera a medida que se avanza en el calculo, pero cuando convergen, en general, lo hacen mucho mas rapido que los metodos cerrados.
+
+## Punto fijo
