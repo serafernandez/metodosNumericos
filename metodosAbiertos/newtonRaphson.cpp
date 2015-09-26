@@ -33,7 +33,7 @@ int main(){
         cout << "\nIteracion " << iteracion << ", Error: " << error;
     }while(error > e);
 
-    cout << "La raiz es " << valorInicial << "con un error de " << error << endl;
+    cout << endl << "La raiz es " << valorInicial << " con un error de " << error << endl;
 
 
     return 0;
