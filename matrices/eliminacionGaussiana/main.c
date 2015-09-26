@@ -15,14 +15,14 @@ int main(void)
 
 	double f;
 	int aux;
-	float errorMinimo = 1e-6;	
-	
+	float errorMinimo = 1e-6;
+
 
 	//cout << endl << "Ingrese terminos independientes: "<< endl;
 	//for(int w = 0; w < filas; w++)
 	//	cin >> b[w];
 
-		
+
 
 	//triangulacion superior
 	int n = filas;
@@ -36,11 +36,11 @@ int main(void)
 			{
 				if(fabs(m[j][i])>errorMinimo)
 				{
-					for (int k=i;k<n-1;k++)
+					for (int k=i;k<=n-1;k++)
 					{
 						aux=m[i][k];
 						m[i][k]=m[j][k];
-						m[j][k]=aux;			
+						m[j][k]=aux;
 					}
 					aux=b[i];
 					b[i]=b[j];
@@ -52,7 +52,8 @@ int main(void)
 			if(cambio==0){
 				cout << "El Sistema es singular! no se puede resolver" << endl;
 				return 0;
-			}
+			}else
+                cout << endl << "Se hizo pivoteo" << endl;
 		}
 	//***********************FIN PIVOTEO********************************
 		for(int j=i+1; j <= n-1; j++)
@@ -61,25 +62,25 @@ int main(void)
 			for (int k=i; k <= n-1; k++)
 				m[j][k]=m[j][k]+f*m[i][k];
 			b[j]=b[j]+f*b[i];
-		} 
+		}
 	}
 
-	//imprime la matriz como quedo!! 
+	//imprime la matriz como quedo!!
 	cout << endl << "La Matriz triangular superior quedo: " << endl;
 	for(int i = 0; i<filas; i++){
 		for(int j = 0; j < columnas; j++){
-			cout << m[i][j] << " ";		
+			cout << m[i][j] << " ";
 		}
 		cout << " ---> " << b[i] ;
 		cout << endl;
 	}
 
-	
+
 	//sustitucion regresiva
 	double suma;
 	double x[filas]; //vector de soluciones
 
-	//valor de la ultima variable 
+	//valor de la ultima variable
 	x[filas-1] = b[filas-1] / m[filas-1][filas-1];
 	cout << endl << "----- Soluciones -----" << endl;
 	cout << endl << "x["<< filas-1 << "]= " << x[filas-1];
@@ -90,10 +91,10 @@ int main(void)
 		for(int j=i+1; j<=n-1; j++)
 		{
 			suma-=m[i][j]*x[j];
-		} 
+		}
 		x[i]=(suma)/m[i][i];
 		cout << endl << "x["<< i << "]= " << x[i];
 	}
 	cout << endl;
- 
+
 }
