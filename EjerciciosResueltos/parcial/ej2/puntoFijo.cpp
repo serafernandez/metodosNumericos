@@ -12,7 +12,7 @@ double g(double x){
 }
 
 double gprima(double x){
-    return 3 - exp(x) + cos(x);
+    return 4 - exp(x) + cos(x);
 }
 
 int main(){
@@ -24,6 +24,9 @@ int main(){
 
     cout << "Ingresar error admisible: ";
     cin >> e;
+
+
+    cout << endl << "comprobacion " << fabs(gprima(valor)) << endl;
 
     if(fabs(gprima(valor)) >= 1){
         cout << endl << "El metodo no converge" << endl;
